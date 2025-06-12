@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.intro {
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.intro h1 {
+    text-align: center;
+    margin: 0 35px 30px 10px;
+    color: #8c2031;
+    font-size: 13px;
+}
+
+.intro-text {
+    margin: 0 40px;
+}
+
+.intro-text p {
+    margin: 10px 15px 0 20px;
+}
+
+.intro-text p:first-child {
+    margin-left: 10px;
+}
+
+.intro-text p:last-child {
+    margin: 10px 35px 0 10px;
+}
+
+.button-container {
+    text-align: center;
+    color: #8c2031;
+}
+
+.button-container p {
+    margin: 16px 115px 16px 90px;
+}
+
+.image-button {
+    width: 130px;
+    height: 39px;
+    border: none;
+    background: url('./images/button_playnow1.gif') no-repeat center;
+    cursor: pointer;
+}
+
+.image-button:hover {
+    background-image: url('./images/button_playnow2.gif');
+}
+
+.container {
+    width: 739px;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+.frame-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frame-row {
+    display: flex;
+}
+
+.game-wrapper {
+    width: 738px;
+    height: 603px;
+    background: url('./images/game.jpg') no-repeat;
+    position: relative;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 160px;
+    left: 0;
+    width: 642px;
+    padding: 10px 0;
+}
+
+.frame-center {
+    background-color: #fff;
+    width: 524px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.legal {
+    text-align: center;
+    font-size: 10px;
+    color: #CCCC99;
+    margin: 20px;
+}
+
+.button-row {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #fff;
+}
+
+iframe {
+    border: none;
+}

@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Alagaësia Adventure Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div id="commandsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <iframe src="./commands.html" width="100%" height="80%"></iframe>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="game-wrapper">
+        <div class="overlay-content">
+            <div class="intro">
+                <h1>HOW TO PLAY</h1>
+
+                <div class="intro-text">
+                    <p>The Alagaësia Adventure is not like most online games. The adventure is interactive like a video
+                        game, but must be illustrated by your own imagination, as with a book.</p>
+                    <p>-Use the suggested commands and directions supplied here as a starting point to complete tasks.
+                        The list is not comprehensive, so in places where none of the listed commands will work, read
+                        the surrounding descriptions carefully. If you get stuck, try different commands or ask for a
+                        hint.</p>
+                    <p>-When in doubt, try to "take" any objects you encounter, as you may need them later on.</p>
+                    <p>-If you get lost, try sketching your path through the game.</p>
+                    <p>Remember, <em>your</em> instructions decide the outcome of your adventure! Be imaginative, and
+                        have fun!</p>
+                </div>
+
+                <div class="button-container">
+                    <p>Click on the "Commands List" button below for tips and shortcuts to use throughout the game.</p>
+                    <button type="button" class="image-button" onclick="startGame()"></button>
+                </div>
+            </div>
+
+            <div class="frame-box" style="display:none">
+                <img src="./images/boxTop.gif" alt="" width="544" height="9"/>
+                <div class="frame-row">
+                    <img src="./images/boxLeft.gif" alt="" width="9" height="350"/>
+                    <div class="frame-center">
+                        <iframe
+                                src="Eragon.z5.html?autoplay=true"
+                                width="510"
+                                height="330"
+                                style="border: none;">
+                        </iframe>
+                    </div>
+                    <img src="./images/boxRight.gif" alt="" width="11" height="349"/>
+                </div>
+                <img src="./images/boxBottom.gif" alt="" width="544" height="9"/>
+            </div>
+        </div>
+    </div>
+    <div class="button-row">
+        <a href="javascript:void(0);" id="openCommands">
+            <img src="./images/commands_button.gif" alt="Commands List"/>
+        </a>
+    </div>
+
+    <div class="legal">
+        <p>
+            Copyright © 2005 Random House, Inc. <br/> Jacket art copyright © 2005 John Jude Palencar. <br/>
+            Based on the Inheritance trilogy by Christopher Paolini. Copyright © 2005 Christopher Paolini.
+        </p>
+        <p>
+            Game archived by Paul O'Brian. This restoration by ibid-11962.
+        </p>
+        <p><b>Trouble loading the game? </b><a id="play-link" target="_blank">Click here to play directly with
+            parchment.</a></p>
+        <!--
+                <p>
+                    Game created using open source technology from <a href="http://sourceforge.net/projects/zplet">SourceForge.net</a>.
+                    © Copyright 2005 - <a href="http://www.ostg.com/">OSTG</a> Open Source Technology Group, All Rights Reserved
+                </p>
+                <p>
+                    <b>Trouble loading the game?</b><a href="http://java.sun.com/j2se/downloads/" target="_blank">Click here</a>
+                    to install the latest version of Java. Please note, however, that this is not a Random House site or
+                    affiliate. Or, <a href="mailto:alagaesia@randomhouse.com">click here to report technical problems</a>
+                </p>
+        -->
+    </div>
+</div>
+<script>
+    function startGame() {
+        document.querySelector('.intro').style.display = 'none';
+        document.querySelector('.frame-box').style.display = 'flex';
+    }
+
+    document.getElementById("openCommands").addEventListener("click", function () {
+        document.getElementById("commandsModal").style.display = "block";
+        document.body.classList.add('no-scroll');
+    });
+
+    document.querySelector(".close-button").addEventListener("click", function () {
+        document.getElementById("commandsModal").style.display = "none";
+        document.body.classList.remove('no-scroll');
+    });
+
+    window.addEventListener("click", function (event) {
+        const modal = document.getElementById("commandsModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+    // Dynamically build full URL to the Z-code file
+    const zcodeFilename = 'Eragon.z5';
+    const fullUrl = `${window.location.origin}${window.location.pathname.replace(/\/[^\/]*$/, '/')}${zcodeFilename}`;
+
+    // Set the href on the link
+    const link = document.getElementById('play-link');
+    link.href = `https://iplayif.com/?story=${encodeURIComponent(fullUrl)}`;
+</script>
+</body>
+</html>

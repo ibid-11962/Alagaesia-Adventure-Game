@@ -1,0 +1,84 @@
+html {
+    scrollbar-width: thin;
+}
+
+body {
+    background-color: #000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 13px;
+}
+
+.container {
+    width: 350px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.directions {
+    text-align: left;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+.directions > h1 {
+    text-align: center;
+    color: #CECF9C;
+    font-size: 13px;
+    margin: 0;
+}
+
+.directions > p {
+    margin: 20px;
+}
+
+.frame-wrapper {
+    display: flex;
+    width: 342px;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: left;
+}
+
+.frame-left {
+    background-image: url('./images/commands_03.gif');
+    background-repeat: repeat-y;
+    background-size: contain;
+    width: 13px;
+}
+
+.frame-right {
+    background-image: url('./images/commands_05.gif');
+    background-repeat: repeat-y;
+    background-size: contain;
+    width: 14px;
+}
+
+.frame-center {
+    flex: 1;
+}
+.frame-center span {
+    color: #CECF9C;
+}
+.frame-center h2 {
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.frame-center h2:first-child {
+    margin: 20px;
+}
+
+.column-wrapper {
+    display: flex;
+}
+
+.column {
+    width: 50%;
+}
+
+p {
+    margin: 10px;
+}
